@@ -2,20 +2,19 @@ import Head from "next/head";
 import dynamic from 'next/dynamic';
 import React from "react";
 import isMobile from 'lib/isMobile';
+import isBot from 'lib/isBot';
 
 const Desktop = dynamic(() => import('composites/landing/Desktop'));
 const Mobile = dynamic(() => import('composites/landing/Mobile'));
 
-export default function Home({ isMobile }) {
-  console.log(isMobile);
-
+export default function Home({ isMobile, isBot }) {
   return (
     <div>
       <Head>
         <title>Responsive Renderding</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isMobile ? <Mobile /> : <Desktop />}
+      {isBot ? (isMobile ? <Mobile /> : <Desktop />) : null}
     </div>
   );
 }
@@ -24,6 +23,7 @@ export async function getServerSideProps({ req }) {
   return {
     props: {
       isMobile: isMobile(req),
+      isBot: isBot(req), // dont render extra data if is a bot
     },
   }
 }
