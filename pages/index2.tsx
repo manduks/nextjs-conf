@@ -17,7 +17,7 @@ export default function Home() {
                 <title>Responsive Renderding</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            {isBotDevice ? (isMobileDevice ? <Mobile /> : <Desktop />) : null}
+            {!isBotDevice ? (isMobileDevice ? <Mobile /> : <Desktop />) : null}
         </>
     );
 }

@@ -9,13 +9,13 @@ const Mobile = dynamic(() => import('composites/landing/Mobile'));
 
 export default function Home({ isMobile, isBot }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Responsive Renderding</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isBot ? (isMobile ? <Mobile /> : <Desktop />) : null}
-    </div>
+      {!isBot ? (isMobile ? <Mobile /> : <Desktop />) : null}
+    </>
   );
 }
 
