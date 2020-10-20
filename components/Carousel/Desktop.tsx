@@ -16,7 +16,7 @@ export default function Desktop() {
       <Slider {...settings}>
         {carouselData().map(d => (
           <div key={d.id}>
-            <img src={d.image} />
+            <img src={d.image} width="100%"/>
           </div>
         ))}
       </Slider>

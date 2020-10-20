@@ -10,7 +10,6 @@ const Mobile = dynamic(() => import('composites/landing/Mobile'));
 export default function Home() {
     const isMobileDevice = isMobile();
     const isBotDevice = isBot(); // dont render extra data if is a bot
-
     return (
         <>
             <Head>
