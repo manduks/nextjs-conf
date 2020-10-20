@@ -20,7 +20,7 @@ export default function Home({ isMobile, isBot }) {
         <meta property="og:site_name" content="Next.js conf 2020" />
         <meta
           property="og:image"
-          content="/seo-card.jpg"
+          content="https://nextjs-conf.vercel.app/seo-card.jpg"
         />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -30,7 +30,7 @@ export default function Home({ isMobile, isBot }) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="/seo-card.jpg"
+          content="https://nextjs-conf.vercel.app/seo-card.jpg"
         />
         <meta name="twitter:url" content={url} />
       </Head>
