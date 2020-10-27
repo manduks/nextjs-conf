@@ -13,10 +13,7 @@ export default function Home() {
   const isBotDevice = isBot(); // dont render extra data if is a bot
   return (
     <>
-      <Head>
-        <title>Responsive Renderding</title>
-        <SEO />
-      </Head>
+      <SEO title="Responsive Renderding SGR"/>
       {!isBotDevice ? isMobileDevice ? <Mobile /> : <Desktop /> : null}
     </>
   );

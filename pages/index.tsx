@@ -1,4 +1,3 @@
-import Head from "next/head";
 import dynamic from 'next/dynamic';
 import React from "react";
 import isMobile from 'lib/isMobile';
@@ -10,10 +9,7 @@ const Mobile = dynamic(() => import('composites/landing/Mobile'));
 export default function Home({ isMobile, isBot }) {
   return (
     <>
-      <Head>
-        <title>Responsive Renderding SSR</title>
-       <SEO />
-      </Head>
+       <SEO title="Responsive Renderding SSR"/>
       {!isBot ? (isMobile ? <Mobile /> : <Desktop />) : null}
     </>
   );
